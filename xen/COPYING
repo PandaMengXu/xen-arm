@@ -1,25 +1,37 @@
- XEN NOTICE
- ==========
 
-This license does *not* cover guest operating systems that use
-Xen services via normal hypercalls - this is merely considered normal
-use of Xen, and does *not* fall under the heading of "derived work".
-Also note that the GPL below is copyrighted by the Free Software
-Foundation, but the instance of code that it refers to (the Xen
-virtual machine monitor) is copyrighted by me and others who actually
-wrote it.
+GNU General Public License
+--------------------------
 
-A few files are licensed under both GPL and a weaker BSD-style
-license. This includes all files within the subdirectory
-include/public, as described in include/public/COPYING. All such files
-include the non-GPL license text as a source-code comment. Although
-the license text refers generically to "the software", the non-GPL
-license applies *only* to those source files that explicitly include
-the non-GPL license text.
+Most files in this repository are licensed under the terms of the GNU
+General Public License (GPL), a copy of which is attached at the end
+of this notice. Note that the only valid version of the GPL as far as
+the files in this repository are concerned is _this_ particular
+version of the license (i.e., *only* v2, not v2.2 or v3.x or
+whatever), unless explicitly otherwise stated.
 
-Note that the only valid version of the GPL as far as Xen is concerned
-is _this_ particular version of the license (i.e., *only* v2, not v2.2
-or v3.x or whatever), unless explicitly otherwise stated.
+Some code fragments in the hypervisor and associated subsystems
+include the 2- or 3-clause BSD license stanzas (also known as Modified
+BSD licenses). When these code sections are compiled as part of a
+GPLv2-licensed program, such as Xen, the result is licensed under
+GPLv2. See the FSF's definition of GPL compatibility:
+ http://www.gnu.org/licenses/gpl-faq.html#WhatDoesCompatMean
+And how this applies to a range of open source licenses:
+ http://www.gnu.org/licenses/license-list.html
+
+Licensing Exceptions (the relaxed BSD-style license)
+----------------------------------------------------
+
+For the convenience of users and those who are porting OSes to run as
+Xen guests, certain files in this repository are not subject to the
+GPL when distributed separately or included in software packages
+outside this repository. Instead we specify a much more relaxed
+BSD-style license. Affected files include the Xen interface headers
+(xen/include/public/COPYING), MiniOS (extras/mini-os) and various
+drivers, support functions and header files within Xen-aware Linux
+source trees.  In all such cases, license terms are stated at the top
+of the file or in a COPYING file in the same directory. Note that
+_any_ file that is modified and then distributed within a Linux kernel
+is still subject to the GNU GPL.
 
  -- Keir Fraser (on behalf of the Xen team)
 
